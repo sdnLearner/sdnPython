@@ -1,0 +1,35 @@
+while True:
+    ip_add = int
+    ipAddress = input("Please input the IP Address: ")
+    ip_addsplit = ipAddress.split('.')
+
+
+    if (len(ip_addsplit) == 4) \
+            and (int(ip_addsplit[0]) != 127) \
+            and (int(ip_addsplit[0]) != 169) \
+            and (0 <= int(ip_addsplit[1]) <= 255) \
+            and (0 <= int(ip_addsplit[2]) != 255) and (0 <= int(ip_addsplit[3]) <= 255):
+        break
+
+    else:
+        print("This is a Invalid IP Address : ")
+        continue
+
+if input == "Exit":
+    quit()
+
+# output for the the Subnet Mask
+while True:
+    subnetMasks = [0, 128, 192, 224, 240, 248, 252, 254, 255]
+
+    snm = input("Please enter the Subnet Mask: ")
+    snm_add = (snm.split('.'))
+
+    if (len(snm_add) == 4) \
+            and (int(snm_add[0]) == 255) \
+            and (int(snm_add[1]) in subnetMasks) \
+            and ( int(snm_add[2]) in subnetMasks and (int(snm_add[3]) in subnetMasks)):
+        break
+    else:
+        print("This is an Invalid Subnet")
+        continue
